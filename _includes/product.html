@@ -4,6 +4,14 @@
     <img src="{{ product.image }}" alt="{{ product.name }} product image" class="product__image">
     <p class="product__description">{{ product.content | remove: '<p>' | remove: '</p>' }}</p>
     {% include product-definition.html %}
+    
+    <!-- WhatsApp Order Button -->
+    <a 
+      href="https://api.whatsapp.com/send?phone=628562626116&text=Hello, I would like to order {{ product.name }}. Please confirm availability." 
+      class="product__order-button"
+      target="_blank">
+      Order via WhatsApp
+    </a>
   </div>
   <img src="{{ product.image }}" alt="{{ product.name }} product image" class="product__image">
 </div>
